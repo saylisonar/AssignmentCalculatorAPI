@@ -18,8 +18,9 @@ public class CalculatorController {
 	@Autowired
 	CalculatorService calService;
 	
-	@RequestMapping(value = "/addition", method = RequestMethod.GET)
-	public @ResponseBody Calculator add(@RequestParam("number1") int number1, @RequestParam("number2") int number2) {
+	@GetMapping(value = "/addition")
+	public @ResponseBody Calculator addition(@RequestParam("number1") int number1, @RequestParam("number2") int number2) {
 		return calService.addition(number1, number2);
 	}
+
 }
