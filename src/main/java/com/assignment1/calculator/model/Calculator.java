@@ -9,6 +9,6 @@ public class Calculator implements Serializable{
 	
 	private static final long serialVersionUID = 2L;
 	
-	private Double answer;
+	private double answer;
 	private String detail;
 }
