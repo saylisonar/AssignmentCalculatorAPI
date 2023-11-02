@@ -63,15 +63,8 @@ public class CalculatorController {
 		return calService.factorial(number1);
 	}
 	
-	@SuppressWarnings("unchecked")
 	@PostMapping("/min-max")
     public @ResponseBody String calculateMinMax(@RequestBody Map<String, Object> list ) {
-		List<Integer> list3 = new ArrayList<>();
-		for (Entry<String, Object> me : list.entrySet()) { 
-           list3 = (List<Integer>) me.getValue();
-        } 
-		int min = Collections.min(list3);
-        int max = Collections.max(list3);
-		return "min : "+min+", max : "+max;
+		return calService.minmax(list);
 	}
 }

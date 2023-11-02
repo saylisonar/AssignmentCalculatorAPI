@@ -1,5 +1,7 @@
 package com.assignment1.calculator.dao;
 
+import java.util.Map;
+
 import com.assignment1.calculator.model.Calculator;
 
 public interface CalculatorDAO {
@@ -10,4 +12,5 @@ public interface CalculatorDAO {
 	public Calculator square(int number1);
 	public Calculator squareroot(int number1);
 	public Calculator factorial(int number1);
+	public String minmax(Map<String, Object> list);
 }

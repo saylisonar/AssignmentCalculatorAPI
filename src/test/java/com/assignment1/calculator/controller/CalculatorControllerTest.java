@@ -5,7 +5,9 @@ package com.assignment1.calculator.controller;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
@@ -88,10 +90,12 @@ class CalculatorControllerTest {
 		assertThat(calculator).isEqualTo(result);
 	}
 	
-	//@Test
+	@Test
 	void testMinmax() {
 		Map<String, Object> list = new HashMap<String, Object>(); 
-		list.put("numbers", "[10,-5,7,15,-7,-6,16,19,-15,9]");
+		List<Integer> arr = new ArrayList<Integer>(4);
+		arr.add(-15); arr.add(19); arr.add(10); arr.add(-5);
+		list.put("numbers", arr);
 		String output = "min : -15, max : 19";
 		String result = controller.calculateMinMax(list);
 		assertThat(output).isEqualTo(result);

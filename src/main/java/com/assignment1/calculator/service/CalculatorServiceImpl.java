@@ -1,5 +1,7 @@
 package com.assignment1.calculator.service;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -44,6 +46,11 @@ public class CalculatorServiceImpl implements CalculatorService {
 	@Override
 	public Calculator factorial(int number1) {
 		return calDao.factorial(number1);
+	}
+
+	@Override
+	public String minmax(Map<String, Object> list) {
+		return calDao.minmax(list);
 	}
 	
 }
